@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TeleEase</title>
+    <link rel="stylesheet" href="/public/css/Dashboard.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link href="/public/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="sidebar">
+        <div class="logo"></div>
+        <ul class="menu">
+            <!-- <li class="active">
+                <a href="teacher_dashboard.html">
+                    <i class="fas fa-tachometer-alt"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li> -->
+            <li class="active">
+                <a href="user_profile">
+                    <i class="fas fa-user"></i>
+                    <span>Profile</span>
+                </a>
+            </li>
+            <li>
+                <a href="booked_appointment">
+                    <i class="fas fa-address-book"></i>
+                    <span>Booked Appointments</span>
+                </a>
+            </li>
+            <li>
+                <a href="new_appointment">
+                    <i class="fas fa-address-book"></i>
+                    <span>New Appointments</span>
+                </a>
+            </li>
+            <li>
+                <a href="suggested packages">
+                    <i class="fas fa-chart-bar"></i>
+                    <span>SMS Appointment Booking</span>
+                </a>
+            </li>
+            <li class="logout">
+                <a href="/">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Logout</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <div class="header-wrappper">
+            <div class="header-title">
+                <h2>Add New Appointments</h2>
+            </div>
+        </div>
+        <div class="wrapper" style="margin-left: 25%; height: 450px; width: 600px">
+            <form action="/new_test" method="post">
+                <h1>Add New Appointment</h1>
+
+                <div class="form-group">
+                    <label>Appointment name (title)</label>
+                    <input type="text" class="form-control" name="test_name" placeholder="Name" required />
+                </div>
+                <div class="form-group">
+                    <label>Doctor name</label>
+                    <input type="text" class="form-control" name="subject_name" placeholder="Doctor name" required />
+                </div>
+                <div class="form-group">
+                    <label>Test date</label>
+                    <input type="date" class="form-control" name="test_date" placeholder="Test Date" required />
+                </div>
+
+                <div class="form-group">
+                    <button class="btn btn-primary btn-block btn-round" style="margin-top: 70px;">BOOK APPOINTMENT</button>
+                </div>
+            </form>
+        </div>
+        <div class="chatbot-wrappper" style="background-color: lightblue; width: fit-content;margin-left: 880px;">
+            <div class="chatbot-title" style="color: blue; font-size: 1px;margin-top: 60px; ">
+                <h4>Mental Health Chatbot -</h4>
+            </div>
+        </div>
+    </div>
+</body>
+<!-- <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+<script src="https://mediafiles.botpress.cloud/15d8c289-86d7-472b-abf8-06faa571cdc1/webchat/config.js" defer></script> -->
+<script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+<script src="https://mediafiles.botpress.cloud/15d8c289-86d7-472b-abf8-06faa571cdc1/webchat/config.js" defer></script>
+</html>

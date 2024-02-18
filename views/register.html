@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,intial-scale=1.0">
+        <title>TeleEase</title>
+        <link rel="stylesheet" href="/public/css/style.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    </head>
+<body>
+    <div class="wrapper" style="height: fit-content;">
+        <form id="registrationForm" action="/register" method="POST">
+            <h1>User Registration</h1>
+            <div class="input-box">
+                <input type="text" id="name" name="name" placeholder="Enter your Full Name" required>
+                <i class='bx bxs-user'></i>
+            </div>
+             <div class="input-box">
+                <input type="text" id="username" name="username" placeholder="Set Username" required>
+                <i class='bx bxs-user'></i>
+             </div>
+             <div class="input-box">
+                <input type="password" id="password" name="password" placeholder="Set Password" required>
+                <i class='bx bxs-lock-alt'></i>
+             </div>
+             <div class="input-box">
+                <label for="usertype" >Selct User Type:</label>
+                <select id="usertype" name="usertype">
+                    <option value="Patient">Patient</option>
+                    
+                  </select>
+                
+             </div>
+             
+             <button type="submit" class="btn"  style="margin-top: 50px;">Register User</button>
+             
+        </form>
+        <div id="message" style="display: none;">User registered successfully!</div>
+        <!-- <script>
+            // Handle form submission
+            document.getElementById('registrationForm').addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevent the form from submitting normally
+    
+                // Get form data
+                var formData = new FormData(this);
+    
+                // Send form data to server using fetch API
+                fetch('/userRegister', {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(response => {
+                    if (response.ok) {
+                        // Show success message
+                        document.getElementById('message').style.display = 'block';
+                        // Clear form fields
+                        document.getElementById('username').value = '';
+                        document.getElementById('password').value = '';
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+            });
+        </script> -->
+    </div>
+
+<!-- Project Setup:
+1.Download xampp server
+2. open xampp control panel
+3. click on start in front of apache and mysql 
+4. click on admin in front of mysql 
+5. localhost tab will open
+6. create new database with name - 'telehealth'
+7. go to import , upload sql file and import
+8. database will get added
+9. git clone our project from response
+10. run command - node app.js -->
+    
+
+</body>
+</html>

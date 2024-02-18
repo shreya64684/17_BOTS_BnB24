@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TeleEase</title>
+    <link rel="stylesheet" href="/public/css/Dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link href="/public/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo"></div>
+        <ul class="menu">
+            <!-- <li class="active">
+                <a href="teacher_dashboard.html">
+                    <i class="fas fa-tachometer-alt"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li> -->
+            <li >
+                <a href="doctor_profile">
+                    <i class="fas fa-user"></i>
+                    <span>Profile</span>
+                </a>
+            </li>
+            <li class="active">
+                <a href="doctor_appointment">
+                    <i class="fas fa-address-book"></i>
+                    <span>Appointments</span>
+                </a>
+            </li>
+            <!-- <li>
+                <a href="new_appointment">
+                    <i class="fas fa-address-book"></i>
+                    <span>New Appointments</span>
+                </a>
+            </li>
+            <li>
+                <a href="index2.html">
+                    <i class="fas fa-chart-bar"></i>
+                    <span>Suggested Packages</span>
+                </a>
+            </li> -->
+            <li class="logout">
+                <a href="/">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Logout</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <div class="header-wrappper">
+            <div class="header-title">
+                <h2>Booked Appointments</h2>
+            </div>
+        </div>
+        <div class="appointments-list">
+            <div class="appointment-item">
+                <p><strong>Appointment 1</p>
+                <p><strong>Date:</strong> January 15, 2024</p>
+                <p><strong>Time:</strong> 10:00 AM</p>
+                <p><strong>Patient Name:</strong> John</p>
+                <p><strong>Status:</strong> Confirmed</p>
+                <button ></button>
+            </div>
+            <hr>
+            <div class="appointment-item">
+                <p><strong>Appointment 2</p>
+                <p><strong>Date:</strong> January 20, 2024</p>
+                <p><strong>Time:</strong> 2:30 PM</p>
+                <p><strong>Patient Name:</strong> Johnson</p>
+                <p><strong>Status:</strong> Pending</p>
+                <div class="form-group">
+                    <button class="btn btn-primary btn-block btn-round" style="margin-top: 20px; width: fit-content; display: flex; justify-content: center;">Accept</button>
+                </div>
+            </div>
+            <!-- Add more appointment items as needed -->
+        </div>
+    </div>
+</body>
+</html>    
+    

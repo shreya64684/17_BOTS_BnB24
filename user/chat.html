@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Doctor's Appointment</title>
+</head>
+<body>
+  <div id="chat">
+    <ul id="messages"></ul>
+    <form id="messageForm">
+      <input id="messageInput" autocomplete="off">
+      <button>Send</button>
+    </form>
+  </div>
+  
+  <script src="/socket.io/socket.io.js"></script>
+  <script>
+    const socket = io();
+
+    // Join the room corresponding to the appointment ID
+    socket.emit('joinRoom', 'appointment123');
+
+    // Function to add a new message to the chat window
+    function addMessage(message) {
+      const messagesList = document.getElementById('messages');
+      const messageElement = document.createElement('li');
+      messageElement.textContent = message;
+      messagesList.appendChild(messageElement);
+    }
+
+    // Listen for incoming messages
+    socket.on('message', message => {
+      addMessage(message);
+    });
+
+    // Send a message when the form is submitted
+    const messageForm = document.getElementById('messageForm');
+    const messageInput = document.getElementById('messageInput');
+
+    messageForm.addEventListener('submit', event => {
+      event.preventDefault();
+      const message = messageInput.value.trim();
+      if (message) {
+        socket.emit('sendMessage', {
+          roomId: 'appointment123',
+          message: message
+        });
+        addMessage('You: ' + message);
+        messageInput.value = '';
+      }
+    });
+  </script>
+</body>
+</html>
